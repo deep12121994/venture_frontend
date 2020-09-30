@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Table.css'
+import './Product_Table.css'
 
 export default class Product_Table extends Component {
     constructor(props){
@@ -47,7 +47,7 @@ export default class Product_Table extends Component {
     render() {
         return(
             <div>
-                <table id='datas'>
+                <table id='products'>
                 <tbody>
                     <tr>{this.renderTableHeader()}</tr>
                     {this.renderTableData()}

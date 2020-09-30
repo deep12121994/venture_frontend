@@ -7,7 +7,7 @@
 
 
 
-#datas {
+#vendors {
     width:100%;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
@@ -15,11 +15,11 @@
     border: 2px solid #ddd;
 }
 
-#datas  tr:nth-child(even){background-color: #eee;}
+#vendors  tr:nth-child(even){background-color: #eee;}
 
-#datas  tr:hover {background-color: #ddd;}
+#vendors  tr:hover {background-color: #ddd;}
 
-#datas  th {
+#vendors  th {
   font-weight: bold; 
   padding-top: 12px;
   padding-bottom: 12px;
@@ -32,17 +32,17 @@
 only screen 
 and (max-width: 760px), (min-device-width: 768px) 
 and (max-device-width: 1024px)  {
-    table, thead, tbody, th, td, tr {
+    #vendors table, thead, tbody, th, td, tr {
         display: block;
     }
 
-    th{
+    #vendors th{
         display: none;
     }
 
-    tr {border: 1px solid grey;}
+    #vendors tr {border: 1px solid grey;}
 
-    td { 
+    #vendors td { 
 		/* Behave  like a "row" */ 
 		border: none;
 		border-bottom: 1px solid #eee; 
@@ -50,7 +50,7 @@ and (max-device-width: 1024px)  {
 		padding-left: 50%;
     }
 
-    td:before { 
+    #vendors td:before { 
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
@@ -61,23 +61,17 @@ and (max-device-width: 1024px)  {
         white-space: nowrap;
     }
     
-    td:nth-of-type(1):before { content: "Product_ID"; }
-    td:nth-of-type(2):before { content: "Product_Name"; }
-    td:nth-of-type(3):before { content: "Brand"; }
-    td:nth-of-type(4):before { content: "Price"; }
-    td:nth-of-type(5):before { content: "Discount"; }
-    td:nth-of-type(6):before { content: " Quantity"; }
-    td:nth-of-type(7):before { content: "Product_Weight"; }
-    td:nth-of-type(8):before { content: "Manufactured_Date"; }
-    td:nth-of-type(9):before { content: "Expired_Date"; }
-    td:nth-of-type(10):before { content: "Date"; }    
+    #vendors td:nth-of-type(1):before { content: "Vendor_ID"; }
+    #vendors td:nth-of-type(2):before { content: "Company_Name"; }
+    #vendors td:nth-of-type(3):before { content: "Contact_Person"; }
+    #vendors td:nth-of-type(4):before { content: "Date"; }    
 
 }
 
 @media
 only screen 
 and (min-device-width: 1025px){
-    #datas td,#datas th {
+    #vendors td,#vendors th {
         border: 1px solid #ddd;
         padding: 8px;
         text-align: center;

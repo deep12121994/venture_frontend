@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Table.css'
+import './Vendor_Table.css'
 
 export default class Order_Table extends Component {
     constructor(props){
@@ -38,7 +38,7 @@ export default class Order_Table extends Component {
     render() {
         return(
             <div>
-                <table id='datas'>
+                <table id='vendors'>
                 <tbody>
                     <tr>{this.renderTableHeader()}</tr>
                     {this.renderTableData()}

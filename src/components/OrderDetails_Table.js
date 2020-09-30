@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Table.css'
+import './OrderDetails_Table.css'
 
 export default class Order_Table extends Component {
     constructor(props){

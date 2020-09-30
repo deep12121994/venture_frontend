@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './Product_Table';
 import './product.css';
-import Product_Table from './Product_Table';
+import ProductTable from './Product_Table';
 import Header from './Header';
 
 export default class Product extends Component {
@@ -25,7 +24,7 @@ export default class Product extends Component {
                             </div>
                         </div>
                         <div className="product-info">
-                            <Product_Table/>
+                            <ProductTable/>
                         </div>
                 </div>
                 

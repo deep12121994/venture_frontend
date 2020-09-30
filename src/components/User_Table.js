@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './Table.css'
+import './User_Table.css'
 
-export default class Order_Table extends Component {
+export default class User_Table extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -44,7 +44,7 @@ export default class Order_Table extends Component {
     render() {
         return(
             <div>
-                <table id='datas'>
+                <table id='users'>
                 <tbody>
                     <tr>{this.renderTableHeader()}</tr>
                     {this.renderTableData()}
