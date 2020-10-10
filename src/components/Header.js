@@ -9,11 +9,16 @@ export default class Header extends Component {
                 <div className="header-logo">
                     <img src={pic} alt="logo" />
                 </div>
-                <a href="#Dashboard"><p>Dashboard</p></a>
-                <a href="#Product"><p>Product</p></a>
+                <a href="/Dashboard"><p>Dashboard</p></a>
+                <a href="/Product"><p>Product</p></a>
                 <a href="#Orders"><p>Orders</p></a>
-                <a href="#Reports"><p>Reports</p></a>
-                <div className="user-name">Username</div>
+                <a href="/user"><p>Users</p></a>
+                <a href="/vendor"><p>Vendors</p></a>
+                <a href="/Reports"><p>Reports</p></a> 
+                <div className="info"> 
+                    <label className="user-name">Username</label>
+                    <button className="btn_logout">Logout</button>
+                </div>
             </div>        
         )
     }

@@ -96,7 +96,7 @@ export default class LogIn extends Component {
                         </div>
                     </div>
                     
-                    <button type="submit" className="button">Log In</button>
+                    <button type="submit" className="btn_login">Log In</button>
                     <p className="forgot-password text-right">
                         <span onClick={this.setRedirect}>New User?</span>
                     </p>

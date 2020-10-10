@@ -7,6 +7,7 @@ export default class Logout extends Component {
         super(props);
         localStorage.removeItem("token");
     }
+    
     render() {
         return(
             <div>

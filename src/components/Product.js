@@ -7,8 +7,8 @@ export default class Product extends Component {
     render() {
         return(
             <div className="container">
-                <Header/>
                 <div className="main-container">
+                    <Header/>
                         <div className="sub-header">
                             <div className="stock-search">
                                 <form>

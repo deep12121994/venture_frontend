@@ -6,11 +6,11 @@ export default class Order_Table extends Component {
         super(props);
         this.state = {
             orders: [
-            {Product_ID:1, Product_Name:"Nike", Brand:"Nike", Price:50, Discount:0,
+            {Order_ID:1, Product_Name:"Nike", Brand:"Nike", Price:50, Discount:0,
              Quantity:2,  Product_Weight: 2,Manufactured_Date:12, Expired_Date:12, Date:29 },
-            {Product_ID:1, Product_Name:"Nike", Brand:"Nike", Price:50, Discount:0,
+            {Order_ID:1, Product_Name:"Nike", Brand:"Nike", Price:50, Discount:0,
                 Quantity:2,  Product_Weight: 2,Manufactured_Date:12, Expired_Date:12, Date:29 },
-            {Product_ID:1, Product_Name:"Nike", Brand:"Nike", Price:50, Discount:0,
+            {Order_ID:1, Product_Name:"Nike", Brand:"Nike", Price:50, Discount:0,
                 Quantity:2,  Product_Weight: 2,Manufactured_Date:12, Expired_Date:12, Date:29 },
              
             ]
@@ -26,10 +26,10 @@ export default class Order_Table extends Component {
 
     renderTableData() {
         return this.state.orders.map((products, index) => {
-           const {Product_ID,Product_Name, Brand, Price, Discount, Quantity, Product_Weight, Manufactured_Date, Expired_Date, Date} = products //destructuring
+           const {Order_ID,Product_Name, Brand, Price, Discount, Quantity, Product_Weight, Manufactured_Date, Expired_Date, Date} = products //destructuring
            return (
-              <tr key={Product_ID}>
-                <td>{Product_ID}</td>
+              <tr key={Order_ID}>
+                <td>{Order_ID}</td>
                 <td>{Product_Name}</td>
                 <td>{Brand}</td>
                 <td>{Price}</td>
@@ -47,7 +47,7 @@ export default class Order_Table extends Component {
     render() {
         return(
             <div>
-                <table id='datas'>
+                <table id='orders'>
                 <tbody>
                     <tr>{this.renderTableHeader()}</tr>
                     {this.renderTableData()}

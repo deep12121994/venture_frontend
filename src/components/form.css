@@ -80,7 +80,7 @@ img{
     opacity: 1;
 }
 
-.button {
+.btn_login {
     border: none;
     color: white;
     padding: 15px 32px;
@@ -98,7 +98,7 @@ img{
     border: 2px solid #e7e7e7;
 }
 
-button:hover{
+.btn_login:hover{
     background-color: lightsteelblue;
 }
 

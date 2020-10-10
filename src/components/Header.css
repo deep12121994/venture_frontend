@@ -23,30 +23,28 @@ body{
 .main-header{
     width:100%;
     height: 83px;
-    overflow: auto; 
+    overflow: auto;
+    position: fixed;
 }
 
 .header-logo img {
     float: left;
-    width: 6%;
+    width: 8%;
     height: 83px;
     background: #555;
     border-radius: 5px;
 }
-  
-.header-logo {
-position: relative;
-}
 
 a {
     float: left;
-    width:20%;
+    height: 83px;
+    width:13.1%;
     background-color: black;
-    color: #f2f2f2;
+    color:whitesmoke;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 a:hover {
@@ -57,7 +55,39 @@ a:hover {
     background-color: pink;
 }
 
+.info {
+    height: 83px;
+    float: left;
+    width:13.4%;
+    background-color: black;
+    color: whitesmoke;
+    padding: 10px 9px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
 .user-name {
     text-align: center;
-    color:black;
+    margin: 3%;
+}
+
+
+.btn_logout {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: whitesmoke;
+    border: 2px solid #e7e7e7;
+    margin: 9.1%;
+}
+
+.btn_logout:hover {
+    background-color: lightsteelblue;
 }
