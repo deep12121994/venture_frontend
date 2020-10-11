@@ -76,7 +76,7 @@ export default class LogIn extends Component {
 
     render(){
         if(this.state.loggedIn){
-            return <Redirect to="/admin"/>
+            return <Redirect to="/Dashboard"/>
         }
         return(
             <div className="App">

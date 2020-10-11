@@ -11,39 +11,45 @@ body{
     margin: 0;
     background-color: #f2f2f2;
 }
+
 .App {
     width: 100%;
 }
 
-.user-container {
+.main-body{
+    height: 100%;
+    width: 100%;
+}
+
+.order-main-container {
     width: 100%;
     height: 100%;
 }
 
-.user-main-container{
+.order-container {
     height: 100%;
     width:100%; 
 }
 
-.user-sub-header {
+.order-sub-header {
     width:100%;
     height: 80px;
     padding-top: 100px;
     padding-bottom: 37px;
 }
 
-.user-search {
+.order-search {
     float: left;
 }
 
-.user-label {
+.order-label {
     font-size: .9em;
     padding-left:100px;
     color:black;
     padding-right: 6px;
 }
 
-.user-staus {
+.order-staus {
     float: left;
     padding-right: 200px;
 }
@@ -53,7 +59,14 @@ body{
     opacity: 1;
 }
 
-.user-info {
+.order-info {
     width:100%;
     height: 549px;
 }
+
+
+
+
+
+
+

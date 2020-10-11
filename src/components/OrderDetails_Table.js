@@ -6,12 +6,12 @@ export default class Order_Table extends Component {
         super(props);
         this.state = {
             orders: [
-            {Order_ID:1, Product_Name:"Nike", Brand:"Nike", Price:50, Discount:0,
-             Quantity:2,  Product_Weight: 2,Manufactured_Date:12, Expired_Date:12, Date:29 },
-            {Order_ID:1, Product_Name:"Nike", Brand:"Nike", Price:50, Discount:0,
-                Quantity:2,  Product_Weight: 2,Manufactured_Date:12, Expired_Date:12, Date:29 },
-            {Order_ID:1, Product_Name:"Nike", Brand:"Nike", Price:50, Discount:0,
-                Quantity:2,  Product_Weight: 2,Manufactured_Date:12, Expired_Date:12, Date:29 },
+            {Order_ID:1, Order_Details:"Nike", Customer_Name: "Deep", Customer_Number: "7045639810",
+                 Order_Type: "Purchase",Quantity:2, Total_Amount:500, Paid:"Yes", Paid_Amount:500, Discount:0, Date:12-12-1212 },
+            {Order_ID:1, Order_Details:"Nike", Customer_Name: "Deep", Customer_Number: "7045639810", 
+                Order_Type: "Purchase", Quantity:2,Total_Amount:500, Paid:"Yes", Paid_Amount:500, Discount:0, Date:12-12-1212 },
+            {Order_ID:1, Order_Details:"Nike", Customer_Name: "Deep",Date:"Nike", Customer_Number: "7045639810", 
+                Order_Type: "Purchase", Quantity:2, Total_Amount:500, Paid:"Yes", Paid_Amount:500, Discount:0, Date:12-12-1212 },
              
             ]
         }
@@ -25,19 +25,20 @@ export default class Order_Table extends Component {
      }
 
     renderTableData() {
-        return this.state.orders.map((products, index) => {
-           const {Order_ID,Product_Name, Brand, Price, Discount, Quantity, Product_Weight, Manufactured_Date, Expired_Date, Date} = products //destructuring
+        return this.state.orders.map((orders, index) => {
+           const {Order_ID,Order_Details, Customer_Name, Customer_Number, Order_Type,Quantity, Total_Amount, Paid, Paid_Amount, Discount, Date} = orders //destructuring
            return (
               <tr key={Order_ID}>
                 <td>{Order_ID}</td>
-                <td>{Product_Name}</td>
-                <td>{Brand}</td>
-                <td>{Price}</td>
-                <td>{Discount}</td>
+                <td>{Order_Details}</td>
+                <td>{Customer_Name}</td>
+                <td>{Customer_Number}</td>
+                <td>{Order_Type}</td>
                 <td>{Quantity}</td>
-                <td>{Product_Weight}</td> 
-                <td>{Manufactured_Date}</td>
-                <td>{Expired_Date}</td>
+                <td>{Total_Amount}</td> 
+                <td>{Paid}</td>
+                <td>{Paid_Amount}</td>
+                <td>{Discount}</td>
                 <td>{Date}</td>     
               </tr>
            )
