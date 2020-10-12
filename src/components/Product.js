@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import './product.css';
 import ProductTable from './Product_Table';
 import Header from './Header';
+import { Redirect } from "react-router-dom";
 
 export default class Product extends Component {
+   
+
     render() {
         return(
             <div className="container">

@@ -28,7 +28,7 @@ export default class Header extends Component {
                 <a href="/dashboard"><p>Dashboard</p></a>
                 <a href="/product"><p>Product</p></a>
                 <a href="/order"><p>Orders</p></a>
-                <a href="/user"><p>Users</p></a>
+                <a href="/customer"><p>Customers</p></a>
                 <a href="/vendor"><p>Vendors</p></a>
                 <a href="/reports"><p>Reports</p></a> 
                 <div className="info"> 

@@ -23,10 +23,7 @@ export default class Admin extends Component {
             return <Redirect to="/"/>
         }
         return(
-            <div>
-                <h1>Hey Welcome!!!</h1>
-                <Link to="/logout"> Logout</Link>
-            </div>
+           <div></div>
         )
     }
 }

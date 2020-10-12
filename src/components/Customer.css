@@ -15,35 +15,35 @@ body{
     width: 100%;
 }
 
-.user-container {
+.customer-container {
     width: 100%;
     height: 100%;
 }
 
-.user-main-container{
+.customer-main-container{
     height: 100%;
     width:100%; 
 }
 
-.user-sub-header {
+.customer-sub-header {
     width:100%;
     height: 80px;
     padding-top: 100px;
     padding-bottom: 37px;
 }
 
-.user-search {
+.customer-search {
     float: left;
 }
 
-.user-label {
+.customer-label {
     font-size: .9em;
     padding-left:100px;
     color:black;
     padding-right: 6px;
 }
 
-.user-staus {
+.customer-staus {
     float: left;
     padding-right: 200px;
 }
@@ -53,7 +53,7 @@ body{
     opacity: 1;
 }
 
-.user-info {
+.customer-info {
     width:100%;
     height: 549px;
 }

@@ -1,32 +1,31 @@
 import React, {Component} from 'react';
-import './User_Table.css'
+import './Customer_Table.css'
 
-export default class User_Table extends Component {
+export default class Customer_Table extends Component {
     constructor(props){
         super(props);
         this.state = {
-            users: [
+            customer: [
             {User_ID:1, User_Name:"deep", DOB:50, Phone_Number:9999988888,
              Email:"deep@gmail.com", Password:"deep123", Date:29 },
             {User_ID:2, User_Name:"parth", DOB:50, Phone_Number:9999988888,
                 Email:"deep@gmail.com", Password:"deep123", Date:29 },
             {User_ID:3, User_Name:"deep", DOB:50, Phone_Number:9999988888,
-                Email:"deep@gmail.com", Password:"deep123", Date:29 },
-             
+                Email:"deep@gmail.com", Password:"deep123", Date:29 },   
             ]
         }
     }
 
     renderTableHeader() {
-        let header = Object.keys(this.state.users[0])
+        let header = Object.keys(this.state.customer[0])
         return header.map((key, index) => {
            return <th key={index}>{key.toUpperCase()}</th>
         })
      }
 
     renderTableData() {
-        return this.state.users.map((users, index) => {
-           const {User_ID,User_Name, DOB, Phone_Number, Email, Password, Date} = users //destructuring
+        return this.state.customer.map((customer, index) => {
+           const {User_ID,User_Name, DOB, Phone_Number, Email, Password, Date} = customer //destructuring
            return (
               <tr key={User_ID}>
                 <td>{User_ID}</td>
@@ -44,7 +43,7 @@ export default class User_Table extends Component {
     render() {
         return(
             <div>
-                <table id='users'>
+                <table id='customer'>
                 <tbody>
                     <tr>{this.renderTableHeader()}</tr>
                     {this.renderTableData()}

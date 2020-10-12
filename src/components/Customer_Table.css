@@ -7,7 +7,7 @@
 
 
 
-#users {
+#customer {
     width:100%;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
@@ -15,11 +15,11 @@
     border: 2px solid #ddd;
 }
 
-#users  tr:nth-child(even){background-color: #eee;}
+#customer  tr:nth-child(even){background-color: #eee;}
 
-#users  tr:hover {background-color: #ddd;}
+#customer  tr:hover {background-color: #ddd;}
 
-#users  th {
+#customer  th {
   font-weight: bold; 
   padding-top: 12px;
   padding-bottom: 12px;
@@ -32,17 +32,17 @@
 only screen 
 and (max-width: 760px), (min-device-width: 768px) 
 and (max-device-width: 1024px)  {
-    #users table, thead, tbody, th, td, tr {
+    #customer table, thead, tbody, th, td, tr {
         display: block;
     }
 
-    #users th{
+    #customer th{
         display: none;
     }
 
-    #users tr {border: 1px solid grey;}
+    #customer tr {border: 1px solid grey;}
 
-    #users td { 
+    #customer td { 
 		/* Behave  like a "row" */ 
 		border: none;
 		border-bottom: 1px solid #eee; 
@@ -50,7 +50,7 @@ and (max-device-width: 1024px)  {
 		padding-left: 50%;
     }
 
-    #users td:before { 
+    #customer td:before { 
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
@@ -61,19 +61,19 @@ and (max-device-width: 1024px)  {
         white-space: nowrap;
     }
     
-    #users td:nth-of-type(1):before { content: "User_ID"; }
-    #users td:nth-of-type(2):before { content: "User_Name"; }
-    #users td:nth-of-type(3):before { content: "DOB"; }
-    #users td:nth-of-type(4):before { content: "Phone_Number"; }
-    #users td:nth-of-type(5):before { content: "Email"; }
-    #users td:nth-of-type(6):before { content: " Password"; }
-    #users td:nth-of-type(7):before { content: "Date"; }
+    #customer td:nth-of-type(1):before { content: "User_ID"; }
+    #customer td:nth-of-type(2):before { content: "User_Name"; }
+    #customer td:nth-of-type(3):before { content: "DOB"; }
+    #customer td:nth-of-type(4):before { content: "Phone_Number"; }
+    #customer td:nth-of-type(5):before { content: "Email"; }
+    #customer td:nth-of-type(6):before { content: " Password"; }
+    #customer td:nth-of-type(7):before { content: "Date"; }
 }
 
 @media
 only screen 
 and (min-device-width: 1025px){
-    #users td,#users th {
+    #customer td,#customer th {
         border: 1px solid #ddd;
         padding: 8px;
         text-align: center;

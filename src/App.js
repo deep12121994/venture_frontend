@@ -8,13 +8,16 @@ import Order from './components/Order';
 import Vendor from './components/Vendor';
 import Report from './components/Report';
 import Dashboard from './components/Dashboard';
-import User from './components/User';
+import Customer from './components/Customer';
+import Admin from './components/Admin';
+import Add_Product from './components/newAddItems/Add_Product';
 
 class App extends Component {
   render(){
     return (
       <Router>
         <div className="App">
+          <Admin/>
           <Switch>
             <Route path="/" exact={true} component={LogIn}/>
             <Route path="/reg" exact={true} component={RegistrationForm}/>
@@ -23,8 +26,9 @@ class App extends Component {
             <Route path="/product" exact={true} component={Product}/>
             <Route path="/order" exact={true} component={Order}/>
             <Route path="/vendor" exact={true} component={Vendor}/>
-            <Route path="/user" exact={true} component={User}/>
+            <Route path="/customer" exact={true} component={Customer}/>
             <Route path="/report" exact={true} component={Report}/>
+            <Route path="/addproduct" exact={true} component={Add_Product}/>
           </Switch>
         </div>
       </Router>
