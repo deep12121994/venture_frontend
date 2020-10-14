@@ -11,6 +11,9 @@ import Dashboard from './components/Dashboard';
 import Customer from './components/Customer';
 import Admin from './components/Admin';
 import Add_Product from './components/newAddItems/Add_Product';
+import Add_Customer from './components/newAddItems/Add_Customer';
+import Add_Order from './components/newAddItems/Add_Order';
+import Add_Vendor from './components/newAddItems/Add_Vendor';
 
 class App extends Component {
   render(){
@@ -29,6 +32,9 @@ class App extends Component {
             <Route path="/customer" exact={true} component={Customer}/>
             <Route path="/report" exact={true} component={Report}/>
             <Route path="/addproduct" exact={true} component={Add_Product}/>
+            <Route path="/addcustomer" exact={true} component={Add_Customer}/>
+            <Route path="/addorder" exact={true} component={Add_Order}/>
+            <Route path="/addvendor" exact={true} component={Add_Vendor}/>
           </Switch>
         </div>
       </Router>
