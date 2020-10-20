@@ -1,45 +1,36 @@
 import React, {Component} from 'react';
 import './OrderDetails_Table.css'
 
-export default class Order_Table extends Component {
+export default class OrderDetails_Table extends Component {
     constructor(props){
         super(props);
         this.state = {
-            orders: [
-            {Order_ID:1, Order_Details:"Nike", Customer_Name: "Deep", Customer_Number: "7045639810",
-                 Order_Type: "Purchase",Quantity:2, Total_Amount:500, Paid:"Yes", Paid_Amount:500, Discount:0, Date:12-12-1212 },
-            {Order_ID:1, Order_Details:"Nike", Customer_Name: "Deep", Customer_Number: "7045639810", 
-                Order_Type: "Purchase", Quantity:2,Total_Amount:500, Paid:"Yes", Paid_Amount:500, Discount:0, Date:12-12-1212 },
-            {Order_ID:1, Order_Details:"Nike", Customer_Name: "Deep",Date:"Nike", Customer_Number: "7045639810", 
-                Order_Type: "Purchase", Quantity:2, Total_Amount:500, Paid:"Yes", Paid_Amount:500, Discount:0, Date:12-12-1212 },
+            orderdetails: [
+                {Brand:"", Product_Name: "", Amount: "", Quantity:0, Discount:0, Total_Amount:0},
+               
              
             ]
         }
     }
 
     renderTableHeader() {
-        let header = Object.keys(this.state.orders[0])
+        let header = Object.keys(this.state.orderdetails[0])
         return header.map((key, index) => {
            return <th key={index}>{key.toUpperCase()}</th>
         })
      }
 
     renderTableData() {
-        return this.state.orders.map((orders, index) => {
-           const {Order_ID,Order_Details, Customer_Name, Customer_Number, Order_Type,Quantity, Total_Amount, Paid, Paid_Amount, Discount, Date} = orders //destructuring
+        return this.state.orderdetails.map((orderdetails, index) => {
+           const {Brand,Product_Name, Amount, Quantity, Discount, Total_Amount} = orderdetails //destructuring
            return (
-              <tr key={Order_ID}>
-                <td>{Order_ID}</td>
-                <td>{Order_Details}</td>
-                <td>{Customer_Name}</td>
-                <td>{Customer_Number}</td>
-                <td>{Order_Type}</td>
-                <td>{Quantity}</td>
-                <td>{Total_Amount}</td> 
-                <td>{Paid}</td>
-                <td>{Paid_Amount}</td>
-                <td>{Discount}</td>
-                <td>{Date}</td>     
+              <tr>
+                <td><input type="text" /></td>
+                <td><input type="text"/></td>
+                <td><input type="text" disabled /></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text" disabled/></td>    
               </tr>
            )
         })
@@ -48,7 +39,7 @@ export default class Order_Table extends Component {
     render() {
         return(
             <div>
-                <table id='orders'>
+                <table id='orderdetails'>
                 <tbody>
                     <tr>{this.renderTableHeader()}</tr>
                     {this.renderTableData()}

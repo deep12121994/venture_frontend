@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './Dashboard.css';
 import Header from './Header';
 
+
 export default class Dashboard extends Component
 {
-
     render(){
         return(
             <div>
@@ -24,20 +24,16 @@ export default class Dashboard extends Component
                         </div>
                         <div className="add-contents">
                             <div className="sub-add-contents">
-                                <label className="dash-label">Customer</label>
-                                <button className="add_btn" type="button" onClick={event =>  window.location.href='/addcustomer'}>+</button>      
+                                <button className="add_btn" type="button" onClick={event =>  window.location.href='/addcustomer'}>Add Customer</button>
                             </div>
                             <div className="sub-add-contents">
-                                <label className="dash-label" id="pro_id">Product</label>
-                                <button className="add_btn" type="button" onClick={event =>  window.location.href='/addproduct'}>+</button>      
+                                <button className="add_btn" type="button" onClick={event =>  window.location.href='/addproduct'}>Add Product</button>
                             </div>
                             <div className="sub-add-contents">
-                                <label className="dash-label" id="ord_id">Order</label>
-                                <button className="add_btn" type="button" onClick={event =>  window.location.href='/addorder'}>+</button>
+                                <button className="add_btn" type="button" onClick={event =>  window.location.href='/addorder'}>Add Order</button>  
                             </div>
                             <div className="sub-add-contents">
-                                <label className="dash-label" id="vndr_id">Vendor</label>
-                                <button className="add_btn" type="button" onClick={event =>  window.location.href='/addvendor'}>+</button>
+                                <button className="add_btn" type="button" onClick={event =>  window.location.href='/addvendor'}>Add Vendor</button> 
                             </div>
                         </div>
                         <div className="dash-cal">

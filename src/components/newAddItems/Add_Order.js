@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './Add_Customer.css';
+import './Add_Order.css';
+import OrderDetails_Table from '../OrderDetails_Table';
 
-export default class Add_Product extends Component {
+export default class Add_Order extends Component {
     state={
         Customer_Name:"",
-        Email:"",
-        Phone:"",
+        Customer_Number:"",
+        Order_Type:"",
+        Quantity:"",
+        Total_Amount:"",
+        Paid:"",
+        Paid_Amount:"",
+        Discount:"",
         Date: "",
+        Order_Details: [],
         redirect: false,
         successMessage:null
     };
@@ -23,15 +30,21 @@ export default class Add_Product extends Component {
             this.props.showError(null);
             const payload = {
                 'c_name':this.state.Customer_Name,
-                'email': this.state.Email,
-                'phone': this.state.Phone,
+                'c_number': this.state.Customer_Number,
+                'ordr_type': this.state.Order_Type,
+                'quantity': this.state.Quantity,
+                'total_amnt': this.state.Total_Amount,
+                'paid': this.state.Paid,
+                'paid_amnt': this.state.Paid_Amount,
+                'discount': this.state.Discount,
+                'order_detls': this.state.Order_Details,
             }
-            axios.post(+'customer',payload)
+            axios.post(+'order',payload)
             .then((res) => {
                 if(res.data.code === 200) {
                     this.setState(prevState => ({
                         ...prevState,
-                        'successMessage' : 'Customer Added successfully!!'
+                        'successMessage' : 'Order Added successfully!!'
                     }))
                     this.props.showError(null)
                 } else {
@@ -49,29 +62,55 @@ export default class Add_Product extends Component {
     render() {
         return(
             <div className="App">
-                <div className="customer-form">
+                <div className="order-form">
                     <form  onSubmit={this.handleSubmit}>
-                        <div className="customer-form-header">Add Customer</div> 
-                        <div className="customer-form-ip">
-                            <div className="customer-details">
-                                <label className="customer-label">Customer_Name</label>
-                                <input type="text" className="customer-form-control" placeholder="Enter customer Name" 
-                                     onChange={event=> this.setState({Customer_Name: event.target.value})}/>
-                            </div>
+                        <div className="order-form-header">Add Order</div> 
+                        <div><button type="submit" className="submit-order-button" >Add Order</button></div>
+                        <div className="order-form-ip">
+                            <table>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th>Customer Number</th>
+                                    <th>Order Type</th>
+                                </tr>
 
-                            <div className="customer-details">
-                                <label className="customer-label">Email</label>
-                                <input type="text" className="customer-form-control" placeholder="Enter customer email"  
-                                    onChange={event=> this.setState({Email: event.target.value})}/>
-                            </div>
-
-                            <div className="customer-details">
-                                <label className="customer-label">Phone</label>
-                                <input type="text" className="customer-form-control" placeholder="Enter phone"  
-                                    onChange={event=> this.setState({Phone: event.target.value})}/>
-                            </div>
+                                <tr>
+                                    <td><input type="text" onChange={event=> this.setState({Customer_Name: event.target.value})}/></td>
+                                    <td><input type="text" onChange={event=> this.setState({Customer_Number: event.target.value})}/></td>
+                                    <td><input type="text" onChange={event=> this.setState({Order_Type: event.target.value})}/></td>
+                                </tr>
+                                
+                            </table>
                         </div>
-                        <button type="submit" className="add-button" >Add Customer</button>
+                       
+                        <div>
+                            <div className="order-details">
+                                <OrderDetails_Table/>
+                            </div>
+
+                            <div className="order-sum">
+                            <table>
+                                <tr>
+                                    <th>Discount</th>
+                                    <td><input type="text" onChange={event=> this.setState({Discount: event.target.value})}/></td>
+                                </tr>
+                                <tr>
+                                    <th>Paid</th>
+                                    <td><input type="text" onChange={event=> this.setState({Paid: event.target.value})}/></td>
+                                </tr>
+                                <tr>
+                                    <th>Paid Amount</th>
+                                    <td><input type="text" onChange={event=> this.setState({Paid_Amount: event.target.value})}/></td>
+                                </tr>
+                                <tr>
+                                    <th>Total Amount</th>
+                                    <td><input type="text" onChange={event=> this.setState({Total_Amount: event.target.value})} disabled/></td>
+                                </tr>   
+                                
+                            </table>
+                        </div>
+                        </div>
+                       
                     </form>
                 </div>
             </div>

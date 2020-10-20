@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Order.css';
-import OrderDetails from './OrderDetails_Table';
+import Order_Table from './Order_Table';
 import Header from './Header';
 
 export default class Order extends Component {
@@ -24,7 +24,7 @@ export default class Order extends Component {
                             </div>
                         </div>
                         <div className="order-info">
-                            <OrderDetails/>
+                            <Order_Table/>
                         </div>
                 </div>
                 

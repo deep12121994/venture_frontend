@@ -78,30 +78,26 @@ body{
 }
 
 .dash-label {
-    margin-left: 75px;
-}
-#pro_id{
-    margin-right: 15px;
-}
-
-#ord_id{
-    margin-right: 34px;
-}
-
-#vndr_id {
-    margin-right: 20px;
+    margin-left: 70px;
+    float: left;
+    margin-top: 10px;
 }
 
 .add_btn {
-    border: solid 1px black;
-    display: inline;
-    height: 30px;
-    width: 30px;
-    font-size: x-large;
-    padding-bottom: 29px;
+    border: solid 2px black;
+    display: inline-block;
+    height: 34px;
+    width: 150px;
+    font-size: 16px;
     margin-top: 5px;
-    margin-left: 15px;
+    margin-left: 55px;
+    border-radius: 9px;
 }
+
+.add_btn:hover{
+    background-color: lightsteelblue;
+}
+
 
 .dash-cal {
     width: 100%;
